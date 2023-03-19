@@ -21,8 +21,8 @@ function App() {
 
 
   useEffect(() => {
-    // leftPanel();
-    // showData();
+    leftPanel();
+    showData();
     userDataFn()
   }, []);
 
@@ -31,7 +31,7 @@ function App() {
     const res = await api.text();
     const jsonData = JSON.parse(res);
     setLeftData(jsonData);
-    // console.log(leftData, jsonData);
+    console.log(leftData, jsonData);
   };
 
   const showData = async (ele) => {
@@ -41,7 +41,6 @@ function App() {
     const res = await api.text();
     const jsonData = JSON.parse(res);
     setRightData(jsonData);
-    console.log(jsonData);
   };
 
 

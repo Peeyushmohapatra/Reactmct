@@ -44,5 +44,10 @@
 }
 
 #li{
-    list-style-type: circle;
+    list-style-type:disc;
+}
+
+.linkk{
+  text-decoration: none;
+  color: black;
 }

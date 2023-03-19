@@ -35,21 +35,20 @@ const ProductDetails = () => {
                   if (ele.title === obj.item) {
                     return (
                       <>
-                        <div>
+                        <div className="random">
                           <label>Product Name</label>
                           <p>{ele.title}</p>
                         </div>
-                        <div>
+                        <div className="random">
                           <label>Product Price</label>
                           <p>₹ {(ele.price * 82.54).toFixed(2)}</p>
                         </div>
-                        <div>
+                        <div className="random">
                           <label>Product Description</label>
                           <p>{ele.description}</p>
                         </div>
-                        <div>
+                        <div className="random">
                           <label>Product Rating</label>
-
                           <p>{ele.rating.rate}</p>
                         </div>
                       </>

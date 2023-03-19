@@ -7,19 +7,19 @@ const Navbar = () => {
     <div className="navbar">
       <div className="subNavbar">
         <ul>
-          <Link to="/home">
+          <Link className="link" to="/home">
             <li>Home</li>
           </Link>
-          <Link to="/product">
+          <Link className="link" to="/product">
             <li>Products</li>
           </Link>
-          <Link to="/users">
+          <Link className="link" to="/users">
             <li>Users</li>
           </Link>
-          <Link to="/contact">
+          <Link className="link" to="/contact">
             <li>Contact</li>
           </Link>
-          <Link to="/login">
+          <Link className="link" to="/login">
            <li>Logout</li>
           </Link>
         </ul>

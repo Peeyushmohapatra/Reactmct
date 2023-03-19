@@ -26,8 +26,10 @@
     cursor: pointer;
 }
 
-.link li{
-  height: 30%;
-  width: 100%;
-  border: 2px solid green;
+
+.link{
+  text-decoration:none;
+  color: white;
 }
+
+

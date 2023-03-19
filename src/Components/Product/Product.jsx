@@ -6,7 +6,7 @@ import { Global } from "../../App";
 
 const Product = () => {
   const obj = useContext(Global);
-  //   console.log(obj);
+    console.log(obj.leftData);
 
   return (
     <div className="productMainContainer">
@@ -37,7 +37,7 @@ const Product = () => {
               obj.rightData.map((ele) => {
                 return (
                   <ul>
-                    <Link to="/productDetails">
+                    <Link className="linkk" to="/productDetails">
                       <li
                         onClick={(e) => {
                           obj.setListData(e.target.innerText);

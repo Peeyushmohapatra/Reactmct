@@ -26,7 +26,7 @@ const Product = () => {
                         console.log(obj.target,"Target");
                       }}
                     >
-                      {ele.toUpperCase()}
+                      {ele}
                     </p>
                   </>
                 );

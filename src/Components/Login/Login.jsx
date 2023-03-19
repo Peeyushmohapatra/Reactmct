@@ -5,11 +5,15 @@ import "./login.css";
 const Login = ({ showPage, setShowPage }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [homePath, setHomePath] = useState("/home");
+  const [loginPath, setLoginPath] = useState("/login");
 
   const checkDetails = () => {
     let symbol1 = 0;
     let symbol2 = 0;
     if (email === "" || password === "") {
+      // setPath("/");
+
       return false;
     }
     console.log(email, password);
@@ -24,6 +28,7 @@ const Login = ({ showPage, setShowPage }) => {
     }
     if (symbol1 !== 1 || symbol2 !== 1) {
       console.log(symbol1, symbol2);
+      // setPath("/");
       return false;
     }
 
@@ -70,22 +75,23 @@ const Login = ({ showPage, setShowPage }) => {
         </div>
 
         <div className="buttonContainer">
-          <Link to={ "/home"}>
-            <button
-              id="login"
-              onClick={() => {
-                if (checkDetails()) {
-                  setShowPage(true);
-                  return;
-                } else {
-                  setShowPage(false);
-                  alert("Go Back");
-                  return;
-                }
-              }}
-            >
-              LOGIN
-            </button>
+          <Link
+            onClick={() => {
+              if (checkDetails()) {
+                // setPath("/home");
+                setShowPage(true);
+                // return;
+                // console.log(path);
+              } else {
+                setShowPage(false);
+                // setPath("/");
+                alert("Go Back");
+                return;
+              }
+            }}
+            to={checkDetails() ? homePath : loginPath}
+          >
+            <button id="login">LOGIN</button>
           </Link>
           <button id="createAccount">CREATE ACCOUNT</button>
         </div>

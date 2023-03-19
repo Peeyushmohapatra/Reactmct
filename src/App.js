@@ -83,7 +83,7 @@ function App() {
             element={<Login showPage={showPage} setShowPage={setShowPage} />}
           />
 
-          {showPage && <Route path="/home" element={<Home />} />}
+          {/* {showPage && <Route path="/home" element={<Home />} />} */}
           <Route path="/home" element={<Home />} />
           <Route path="/product" element={<Product />} />
           <Route path="/users" element={<Users />} />
